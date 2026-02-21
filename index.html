@@ -675,7 +675,7 @@ function startSub(parentIdx,subIdx){
   var sub=S.parents[parentIdx].subs[subIdx];
   S.currentParent=parentIdx;
   var flatIdx=S.chapters.indexOf(sub);
-  S.current={chapterIndex:flatIdx,parentIdx:parentIdx,subIdx:subIdx,questions:sub.items,index:0,score:0,answers:[]};
+  S.current={chapterIndex:flatIdx,parentIdx:parentIdx,subIdx:subIdx,questions:shuffle(sub.items),index:0,score:0,answers:[]};
   $('qcmPill').textContent=S.parents[parentIdx].name+' \u2014 Partie '+(subIdx+1);
   $('nextBtn').textContent='Suivant \u2192';
   show('sQcm');renderQ();
